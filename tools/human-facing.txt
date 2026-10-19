@@ -1,0 +1,8 @@
+# Files a person reads. readability.py enforces grade 8 or below on exactly these.
+# Everything else in the kit is read by an assistant or a maintainer and is exempt.
+README.md
+TRUST.md
+CHANGELOG.md
+SUPPORT.md
+couples/README.md
+example/maya/README.md

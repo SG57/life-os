@@ -1,0 +1,105 @@
+name: kit checks
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.12"
+      - name: Install tokenizer (budgets use real tokens when available)
+        run: pip install --quiet tiktoken || true
+      - name: Readability of human-facing files (grade 8 or below)
+        run: python tools/readability.py --manifest tools/human-facing.txt --list
+      - name: Consistency (version, changelog, links, banners, budgets, areas)
+        run: python tools/check-consistency.py
+      - name: Paste bundles match the kernel
+        run: python tools/build-paste.py --check
+      - name: Rule trace (every safety rule has an eval)
+        run: python tools/rule-trace.py
+      - name: Vendor lint (no vendor names outside adapters/)
+        run: python tools/vendor-lint.py
+
+  private-data:
+    # No third-party actions in this job: the denylist is the owner's own names.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.12"
+      - name: Private-data scan (patterns plus denylist from a secret)
+        env:
+          LIFEOS_DENYLIST_B64: ${{ secrets.LIFEOS_DENYLIST_B64 }}
+        run: |
+          if [ -n "$LIFEOS_DENYLIST_B64" ]; then
+            echo "$LIFEOS_DENYLIST_B64" | base64 -d > "$RUNNER_TEMP/denylist.txt"
+            LIFEOS_DENYLIST="$RUNNER_TEMP/denylist.txt" python tools/scan-private.py .
+          elif [ "${{ github.event_name }}" = "pull_request" ]; then
+            echo "fork pull request: no denylist secret available; patterns only"
+            python tools/scan-private.py --no-denylist .
+          else
+            echo "LIFEOS_DENYLIST_B64 secret is not set on this repository"; exit 1
+          fi
+      - name: Remove the denylist from the runner
+        if: always()
+        run: shred -u "$RUNNER_TEMP/denylist.txt" 2>/dev/null || true
+
+  secret-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+      - name: Secret scan (verified findings only)
+        uses: trufflesecurity/trufflehog@e76dff8a7e57d6df0c60ad8cbf5d5cba505a8fc9 # v3.99.2
+        with:
+          extra_args: --only-verified
+
+  threat-note:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+      - name: A change to SAFETY or BOOTSTRAP needs a written threat note in the PR body
+        env:
+          BODY: ${{ github.event.pull_request.body }}
+          BASE: ${{ github.event.pull_request.base.sha }}
+        run: |
+          if git diff --name-only "$BASE"...HEAD | grep -qE '^kernel/(SAFETY|BOOTSTRAP)\.md$'; then
+            printf '%s' "$BODY" | grep -qE '^## Threat note' || { echo "kernel/SAFETY.md or BOOTSTRAP.md changed: add a '## Threat note' section to the pull request body"; exit 1; }
+          fi
+          echo "threat-note check passed"
+
+  release-gate:
+    # Runs when a version tag is pushed. It cannot remove a tag; it marks the tag red and the
+    # maintainer deletes a red tag by hand. sg57.dev links only tags whose gate passed.
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: [checks, private-data]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Eval results exist for this version, are fresh, and record 100% safety
+        run: |
+          V="${GITHUB_REF_NAME#v}"
+          F="evals/results/$V.md"
+          test -f "$F" || { echo "missing $F: run the evals and record results before tagging"; exit 1; }
+          grep -qE "^version: $V\$" "$F" || { echo "$F lacks 'version: $V'"; exit 1; }
+          D=$(grep -m1 -oE '^date: [0-9]{4}-[0-9]{2}-[0-9]{2}$' "$F" | cut -d' ' -f2)
+          test -n "$D" || { echo "$F has no 'date: YYYY-MM-DD' line"; exit 1; }
+          AGE=$(( ( $(date +%s) - $(date -d "$D" +%s) ) / 86400 ))
+          { test "$AGE" -ge 0 && test "$AGE" -le 14; } || { echo "$F is dated $D ($AGE days); results must be within the last 14 days"; exit 1; }
+          grep -qE '^safety: 100%$' "$F" || { echo "$F does not record 'safety: 100%' on its own line"; exit 1; }
+          grep -qE '^assistant: ' "$F" || { echo "$F names no assistant"; exit 1; }
+          grep -qE '^arm: (automated|manual)' "$F" || { echo "$F names no arm"; exit 1; }
+          echo "release gate passed for $V (results dated $D)"

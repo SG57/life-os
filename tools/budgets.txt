@@ -1,0 +1,96 @@
+# Token budgets per file (tiktoken cl100k when available, else characters/4).
+# Why: long rule sets degrade instruction-following, and rules at the end of a long prompt drop first.
+# Hard limits checked by check-consistency.py. Raising one is a visible amendment recorded in CHANGELOG and RULE-CONFLICTS #14.
+# Amendment 2026-10-17 (second): after the verification round the kernel grew by design (quoted-lines rule, never-list wording,
+# scheduled-job text, discreet-mode detail, CRISIS in the return bundle). Measured always-resident set (SAFETY+RHYTHM): 5227 tokens.
+# example/maya/README.md is read once by a person and never loaded at runtime; its budget is a reading-length cap.
+# Amendment 2026-10-18 (3.0.0): the kernel gains OVERSIGHT.md (always resident: monthly check-up, waking and sleeping
+# departments, misbehavior, scrubbed bug reports), STATE gains the life map, the departments registry and the events log,
+# BOOTSTRAP gains the life map step and the one-department onboarding, RHYTHM gains R22. Measured always-resident set
+# (SAFETY+RHYTHM+OVERSIGHT): about 6,500 tokens. RETURN and RESIDENT bundles rise accordingly. Areas may reach 1,500.
+kernel/SAFETY.md 3850
+kernel/RHYTHM.md 1800
+kernel/OVERSIGHT.md 750
+kernel/STATE.md 2050
+kernel/BOOTSTRAP.md 3200
+kernel/CRISIS.md 850
+areas/_TEMPLATE.md 450
+areas/after-loss.md 1450
+areas/business.md 1450
+areas/caregiving.md 1450
+areas/credit.md 1450
+areas/digital.md 1450
+areas/disability.md 1450
+areas/education.md 1450
+areas/estate.md 1450
+areas/health.md 1450
+areas/home.md 1450
+areas/home-buying.md 1450
+areas/identity.md 1450
+areas/immigration.md 1450
+areas/kids.md 1450
+areas/later-life.md 1450
+areas/legal.md 1450
+areas/medical-bills.md 1450
+areas/money.md 1450
+areas/moving.md 1450
+areas/occasions.md 1450
+areas/paperwork.md 1450
+areas/partner.md 1450
+areas/pets.md 1450
+areas/preparedness.md 1450
+areas/protection.md 1450
+areas/public-benefits.md 1450
+areas/retirement.md 1450
+areas/separation.md 1450
+areas/service.md 1450
+areas/taxes.md 1450
+areas/travel.md 1450
+areas/upkeep.md 1450
+areas/vehicles.md 1450
+areas/work.md 1450
+calendar/ANNUAL.md 1300
+adapters/CAPABILITIES.md 1000
+adapters/MUSE.md 1050
+dist/PASTE-SETUP.txt 8000
+dist/PASTE-RETURN.txt 10000
+dist/PASTE-RESIDENT.txt 9850
+dist/CATALOG.txt 3600
+README.md 950
+TRUST.md 2400
+example/maya/README.md 2500
+adapters/GROK-BOT.md 650
+dist/AREA-after-loss.txt 1550
+dist/AREA-business.txt 1550
+dist/AREA-caregiving.txt 1550
+dist/AREA-credit.txt 1550
+dist/AREA-digital.txt 1550
+dist/AREA-disability.txt 1550
+dist/AREA-education.txt 1550
+dist/AREA-estate.txt 1550
+dist/AREA-health.txt 1550
+dist/AREA-home.txt 1550
+dist/AREA-home-buying.txt 1550
+dist/AREA-identity.txt 1550
+dist/AREA-immigration.txt 1550
+dist/AREA-kids.txt 1550
+dist/AREA-later-life.txt 1550
+dist/AREA-legal.txt 1550
+dist/AREA-medical-bills.txt 1550
+dist/AREA-money.txt 1550
+dist/AREA-moving.txt 1550
+dist/AREA-occasions.txt 1550
+dist/AREA-paperwork.txt 1550
+dist/AREA-partner.txt 1550
+dist/AREA-pets.txt 1550
+dist/AREA-preparedness.txt 1550
+dist/AREA-protection.txt 1550
+dist/AREA-public-benefits.txt 1550
+dist/AREA-retirement.txt 1550
+dist/AREA-separation.txt 1550
+dist/AREA-service.txt 1550
+dist/AREA-taxes.txt 1550
+dist/AREA-travel.txt 1550
+dist/AREA-upkeep.txt 1550
+dist/AREA-vehicles.txt 1550
+dist/AREA-work.txt 1550
