@@ -1,6 +1,6 @@
 # Life OS — single source of truth
 
-**Version:** 3.5.1 · **Owner:** SG57 — public repo (read freely, no account needed; SG57 is the only writer)
+**Version:** 3.5.1 · **Owner:** SG57 — public repo (read freely, no account needed; only SG57 merges to main, and every other change, including the maintainer's assistant's, arrives as a pull request that passes the private-data check)
 
 This repo versions the *framework* — the Departments system structure, the guide, and the couples charter.
 It does **not** hold private data (balances, account numbers, credentials). Those live only in each
@@ -18,7 +18,7 @@ person's own Muse memory/workspace and are never committed here.
 - `couples/CHARTER.md` — operating principles for the shared couples department (neutral mediation, Socratic, facts-only).
 
 ## Upgrade flow
-0. **Upstream rule (maintainer):** every enhancement discovered while dogfooding is written back here in the same session — spec, catalog, VERSION, changelog. Nothing lives only in one install.
+0. **Upstream rule (maintainer):** every enhancement discovered while dogfooding is proposed here in the same session, as a pull request with nothing about the person in it (SAFETY S1.7) — spec, catalog, VERSION, changelog. Nothing lives only in one install.
 1. Edit files here, commit, push → bump `VERSION` (minor for new departments/sections, major for structural changes).
 2. The maintainer's own install picks changes up as they're made; a monthly check catches anything pushed from elsewhere.
 3. Every other install checks the source monthly per `setup/UPDATE_CHECK.md`: compare VERSION, then apply per the consent tiers — patch/minor framework updates auto-apply and are announced in the weekly Brief; major changes get one yes. Access is plain public download (browser, raw files, zip, clone) — no GitHub account or connector needed. Updates never touch the person's data.
