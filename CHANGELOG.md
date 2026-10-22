@@ -1,5 +1,8 @@
 # Changelog
 
+## 3.5.3 — 2026-10-22
+- **No install writes to the repo, the maintainer's included** (SAFETY S1.7, `setup/UPDATE_CHECK.md`). A framework improvement found while dogfooding is drafted as an email to the maintainer (subject "Life OS change proposal: <short title>": what, where, why, proposed text), scrubbed of everything about the person, and he applies it from his own machine. This replaces 3.5.2's pull requests from an assistant account: no assistant holds write access at all.
+
 ## 3.5.2 — 2026-10-22
 - **Security: nothing about the person in public places (new rule S1.7).** A public repository, a published page or share link, or a public post is shared with everyone, so framework text written there never carries names, places, institutions, amounts, dates, health or relationship details, or links to anyone's documents, whoever asks. Writing there is a T3 action: read-back and yes first.
 - **The upstream rule now has a lock** (`setup/UPDATE_CHECK.md`): the maintainer's assistant proposes each write-back as a pull request from its own account, after showing the exact change; the repo's private-data check must pass and the maintainer approves the merge. It never pushes to main. Why: a rule with no check behind it is not enough; now the private-data check blocks the merge.
