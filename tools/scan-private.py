@@ -55,14 +55,16 @@ def load_denylist() -> list[str] | None:
 
 
 def iter_files(paths: list[str]):
+    # Yields (root, file). Folder rules use the path below the scanned root: a root that itself
+    # sits under .work (where publishing happens) must still be scanned, not skipped as a whole.
     for p in paths:
         path = Path(p)
         if path.is_dir():
             for f in path.rglob("*"):
-                if f.is_file() and not (set(f.parts) & SKIP_DIRS) and f.suffix.lower() in TEXT_SUFFIXES:
-                    yield f
+                if f.is_file() and not (set(f.relative_to(path).parts) & SKIP_DIRS) and f.suffix.lower() in TEXT_SUFFIXES:
+                    yield path, f
         elif path.is_file():
-            yield path
+            yield path.parent, path
 
 
 def main(argv: list[str]) -> int:
@@ -81,14 +83,16 @@ def main(argv: list[str]) -> int:
     deny_rx = [re.compile(rf"(?<!\w){re.escape(t)}(?!\w)", re.I) for t in denylist]
 
     hits = 0
-    for f in iter_files(paths):
+    scanned = 0
+    for root, f in iter_files(paths):
+        scanned += 1
         try:
             text = f.read_text(encoding="utf-8")
         except UnicodeDecodeError:
             continue
         rel = f.as_posix()
         rel_tail = "/".join(f.parts[-2:])
-        fictional = bool(FICTIONAL_DIRS & set(f.parts))
+        fictional = bool(FICTIONAL_DIRS & set(f.relative_to(root).parts))
         phone_ok = any(rel.endswith(a) for a in ALLOW_PHONE_FILES) or fictional
         hex_ok = any((a.endswith("/") and f"/{a}" in f"/{rel}") or rel.endswith(a) for a in ALLOW_HEX_FILES)
         for lineno, line in enumerate(text.splitlines(), 1):
@@ -114,7 +118,10 @@ def main(argv: list[str]) -> int:
     if hits:
         print(f"\n{hits} private-data hit(s). Nothing with a hit may be published.")
         return 1
-    print(f"no private-data patterns found ({len(denylist)} denylist terms checked)")
+    if scanned == 0:
+        print("scanned 0 files: nothing was checked, so nothing is known to be clean", file=sys.stderr)
+        return 2
+    print(f"no private-data patterns found in {scanned} files ({len(denylist)} denylist terms checked)")
     return 0
 
 
