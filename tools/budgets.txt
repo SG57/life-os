@@ -20,6 +20,7 @@
 # rewrite (S0.1, S0.2, CRISIS header, recap) and made auto-update safe (hash check, tamper halts, sticky undo, no new
 # permissions on its own). Measured: SAFETY.md 4678, CRISIS.md 927, BOOTSTRAP.md 3606, RHYTHM.md 2219, OVERSIGHT.md 706, STATE.md 1982, PASTE-SETUP.txt 9378, PASTE-RESIDENT.txt 10632, PASTE-RETURN.txt 10789, README.md 1129.
 # The always-loaded set (RESIDENT) is ~38% above 3.0. If the 3.6.0 evals show weaker rule-following, trim S5.1 first.
+# Amendment 2026-10-23 (3.6.0): TRUST.md 2400 -> 2450 to report both 3.6.0 eval runs next to 3.0.0's, honestly.
 kernel/SAFETY.md 4850
 kernel/RHYTHM.md 2300
 kernel/OVERSIGHT.md 750
@@ -69,7 +70,7 @@ dist/PASTE-RETURN.txt 11150
 dist/PASTE-RESIDENT.txt 11000
 dist/CATALOG.txt 3600
 README.md 1200
-TRUST.md 2400
+TRUST.md 2450
 example/maya/README.md 2500
 adapters/GROK-BOT.md 650
 dist/AREA-after-loss.txt 1550
