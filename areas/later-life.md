@@ -1,4 +1,4 @@
-> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.0.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
+> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.6.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
 
 # Later life
 `version: 3.0.0 · autonomy_max: T2 (reminders and calendar holds only) · connectors: none · also: home, health, retirement, estate, protection, vehicles, identity, moving, home-buying, pets · fresh_days: 30 · sensitivity: high · default: dormant · wakes_on: turning 70, retiring within 12 months, a fall or starting to live alone, death of a spouse or partner, giving up driving, moving into assisted living or a care home, a health or mobility change after 60 (generic label) · sleeps_when: never once awake · label: "Later life"`

@@ -1,4 +1,4 @@
-> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.0.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
+> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.6.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
 
 # Debts & credit
 `version: 3.0.0 · autonomy_max: T2 (reminders and calendar holds only) · connectors: none (optional: read-only bank data) · also: money, identity, education, home-buying, vehicles, partner · fresh_days: 30 · sensitivity: high · default: opt-in · wakes_on: leaving school with student loans, first credit card, asked to co-sign, planning a mortgage or car loan, onboarding (life map: debt that charges interest) · sleeps_when: no debt and no loan planned for 12 months (the yearly report check stays with identity) · label: "Debts & credit"`

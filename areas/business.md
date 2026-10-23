@@ -1,4 +1,4 @@
-> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.0.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
+> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.6.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
 
 # Business & side income
 `version: 3.0.0 · autonomy_max: T2 (reminders and calendar holds only) · connectors: none (optional: read-only bank data for the business account) · also: taxes, money, protection, retirement, digital, work, home, public-benefits · fresh_days: 30, 7 near a filing date · sensitivity: medium · default: opt-in · wakes_on: starting freelance or side-business income, forming an LLC or company, renting out a property or room, hiring help at home or for the business, onboarding (life map: your own business) · sleeps_when: the business or rental is closed and its final returns and dissolution filings are done · label: "Business"`

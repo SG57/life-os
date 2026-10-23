@@ -1,4 +1,4 @@
-> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.0.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
+> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.6.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
 
 # Extra support
 `version: 3.0.0 · autonomy_max: T2 (reminders and calendar holds only) · connectors: none · also: public-benefits, kids, education, estate, protection, work, money, legal, health, taxes · fresh_days: 7 near a review or appeal, 30 otherwise · sensitivity: high · default: dormant · wakes_on: disability or long illness, a child's developmental or disability diagnosis (generic label), a dependent with a disability turning 17 · sleeps_when: no plan, benefit, waitlist, or review open for 12 months, or you say so · label: "Extra support"`

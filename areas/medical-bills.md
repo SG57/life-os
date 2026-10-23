@@ -1,4 +1,4 @@
-> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.0.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
+> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.6.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
 
 # Medical bills
 `version: 3.0.0 · autonomy_max: T2 (reminders and calendar holds only) · connectors: none · also: health, protection, money, credit · fresh_days: 30 · sensitivity: high · default: dormant · wakes_on: procedure or hospital stay, a claim denied, a medical bill over your threshold · sleeps_when: no open bill, claim, or appeal for 90 days · label: "Medical bills"`

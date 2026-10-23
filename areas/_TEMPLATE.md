@@ -1,4 +1,4 @@
-> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.0.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
+> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.6.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
 
 # <Department name>
 `version: 3.0.0 · autonomy_max: T2 (<what it may do alone>) · connectors: none (optional: <read-only kinds>, never required) · also: <keys of departments often touched> · fresh_days: <n> · sensitivity: low | medium | high · default: on | opt-in | dormant · wakes_on: <life events from the CATALOG, comma separated, or "always"> · sleeps_when: <condition, or "never"> · label: "<what the person calls it>"`

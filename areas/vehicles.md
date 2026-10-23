@@ -1,4 +1,4 @@
-> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.0.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
+> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.6.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
 
 # Vehicles
 `version: 3.0.0 · autonomy_max: T2 (reminders and calendar holds only) · connectors: none · also: protection, money, paperwork, moving, later-life, kids · fresh_days: 365 for registration, 30 for recalls · sensitivity: low · default: opt-in · wakes_on: buying or leasing a car, child turns 16, onboarding (life map: a car) · sleeps_when: no vehicle and no driver in the household for 90 days, after title, plate, and insurance are closed · label: "Car"`

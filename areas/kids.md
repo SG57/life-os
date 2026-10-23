@@ -1,4 +1,4 @@
-> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.0.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
+> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.6.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
 
 # Kids
 `version: 3.0.0 · autonomy_max: T2 (reminders and calendar holds only) · connectors: none (optional: read-only school calendar) · also: protection, health, estate, taxes, work, money, education, pets, vehicles, partner, public-benefits · fresh_days: 1 for an add-a-child window, 30 otherwise · sensitivity: high · default: dormant · wakes_on: a child joins the family, a stepchild joins the household, raising a relative's child · sleeps_when: the youngest child is 18 and the launch items are done · label: "Kids"`

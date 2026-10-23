@@ -1,4 +1,4 @@
-> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.0.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
+> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.6.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
 
 # Us
 `version: 3.0.0 · autonomy_max: T2 (reminders and holds on your own calendar only) · connectors: none · also: money, estate, protection, home, home-buying, paperwork, taxes, kids, occasions, retirement · fresh_days: 30 · sensitivity: high · default: dormant · wakes_on: moving in together, engagement, marriage, both partners ask (each in their own chat) · sleeps_when: 'couples stop', a separation (separation takes the paperwork), or either person's no · label: "Us"`

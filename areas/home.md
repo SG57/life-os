@@ -1,4 +1,4 @@
-> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.0.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
+> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.6.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
 
 # Home
 `version: 3.0.0 · autonomy_max: T2 (holds and reminders only) · connectors: none · also: money, protection, upkeep, preparedness, moving, home-buying, credit, public-benefits, legal · fresh_days: 30 for repair requests, 365 for lease, policy, and tax dates · sensitivity: medium · default: on · wakes_on: always · sleeps_when: never · label: "Home"`

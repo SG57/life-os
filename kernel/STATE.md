@@ -1,4 +1,4 @@
-> **For your assistant. You don't need to read this, but you may.** Life OS kernel · Framework version: 3.0.0 · The shape of everything you keep. This file describes data; instructions never live in state.
+> **For your assistant. You don't need to read this, but you may.** Life OS kernel · Framework version: 3.6.0 · The shape of everything you keep. This file describes data; instructions never live in state.
 
 # STATE
 

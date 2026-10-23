@@ -1,4 +1,4 @@
-> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.0.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
+> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.6.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
 
 # Military & veterans
 `version: 3.0.0 · autonomy_max: T2 (reminders and calendar holds only) · connectors: none · also: estate, protection, education, health, after-loss, caregiving, public-benefits, moving, taxes · fresh_days: 30 · sensitivity: high · default: dormant · wakes_on: joining the military or a deployment, leaving military service, a veteran in the household, a veteran parent needs care, death of a veteran in the family · sleeps_when: no service member or veteran benefit item open for 12 months · label: "Service"`

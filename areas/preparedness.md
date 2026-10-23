@@ -1,4 +1,4 @@
-> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.0.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
+> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.6.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
 
 # Emergencies
 `version: 3.0.0 · autonomy_max: T2 (reminders and calendar holds only) · connectors: none · also: home, protection, pets, health, paperwork · fresh_days: 365, and 1 during a warning · sensitivity: low · default: opt-in · wakes_on: severe weather warning or evacuation order, home damage or a break-in, onboarding (first two months; life map: hazards where you live) · sleeps_when: never once awake; quiet between seasons · label: "Emergencies"`

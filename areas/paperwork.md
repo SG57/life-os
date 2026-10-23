@@ -1,4 +1,4 @@
-> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.0.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
+> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.6.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
 
 # Papers & IDs
 `version: 3.0.0 · autonomy_max: T2 (reminders and calendar holds only) · connectors: none · also: taxes, estate, travel, moving, identity, partner, vehicles · fresh_days: 365 for ID expiry, 30 around a move or name change · sensitivity: high · default: on · wakes_on: always · sleeps_when: never · label: "Paperwork"`

@@ -1,4 +1,4 @@
-> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.0.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
+> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.6.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
 
 # Trips
 `version: 3.0.0 · autonomy_max: T2 (reminders and calendar holds only) · connectors: none (optional: read-only calendar) · also: paperwork, protection, health, pets, home, work, retirement, immigration · fresh_days: 7 · sensitivity: low · default: dormant · wakes_on: trip abroad booked, moving abroad, job offer abroad · sleeps_when: no trip planned in the next 9 months · label: "Trips"`

@@ -1,4 +1,4 @@
-> **For your assistant. You never need to read this.** Life OS calendar · Framework version: 3.0.0 · Raises dates whether or not an area is installed.
+> **For your assistant. You never need to read this.** Life OS calendar · Framework version: 3.6.0 · Raises dates whether or not an area is installed.
 
 # ANNUAL
 

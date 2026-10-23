@@ -1,4 +1,4 @@
-> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.0.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
+> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.6.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
 
 # Pets
 `version: 3.0.0 · autonomy_max: T2 (reminders and calendar holds only) · connectors: none (optional: read-only calendar) · also: protection, estate, money, travel, moving, home, home-buying · fresh_days: 30 for medicines, 365 for vaccines · sensitivity: medium · default: opt-in · wakes_on: new pet, onboarding (life map: animals at home) · sleeps_when: no animals in the household, after refills, auto-ship, and insurance are closed · label: "Pets"`

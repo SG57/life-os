@@ -1,4 +1,4 @@
-> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.0.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
+> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.6.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
 
 # Moving
 `version: 3.0.0 · autonomy_max: T2 (reminders and calendar holds only) · connectors: none · also: home, paperwork, protection, vehicles, health, pets, taxes, kids, preparedness, immigration · fresh_days: 7 · sensitivity: medium · default: dormant · wakes_on: moving, moving to another state, moving abroad, lease not renewed, home under contract, selling a home, moving into assisted living or a care home · sleeps_when: 60 days after the move, once every address item is done · label: "Moving"`

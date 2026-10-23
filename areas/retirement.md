@@ -1,4 +1,4 @@
-> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.0.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
+> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.6.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
 
 # Retirement
 `version: 3.0.0 · autonomy_max: T2 (reminders and calendar holds only) · connectors: none (optional: read-only brokerage data) · also: money, taxes, protection, work, later-life, estate, partner · fresh_days: 30 for statements, 365 for the earnings record · sensitivity: high · default: opt-in · wakes_on: first job, new job, retirement or investment account opened or found, stock grant or options, turning 50, retiring within 10 years, retiring within 12 months, onboarding (life map: a retirement account) · sleeps_when: never once an account or pension exists · label: "Retirement"`

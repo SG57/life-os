@@ -1,6 +1,8 @@
+> **For your assistant.** Life OS shared departments · Framework version: 3.6.0 · Read only when a department is shared with another person.
+
 # Shared departments — two people's installs, one department
 
-A shared department joins the same catalog department across two (or more) people's separate Life OS installs — a couple's Couples department, a shared home purchase, a family caregiving effort. The assistants never message each other directly; a **shared record** is the only wire, exactly as one shared record wires the departments inside a single install (S11).
+A shared department joins the same catalog department across two (or more) people's separate Life OS installs — a couple's Couples department, a shared home purchase, a family caregiving effort. The assistants never message each other directly; a **shared record** is the only wire, exactly as one shared record wires the departments inside a single install (RHYTHM R24).
 
 ## Structure (per counterparty)
 In a shared store both people can reach (Google Drive or equivalent):
@@ -23,7 +25,7 @@ Permissions follow people: everything a counterparty may see lives under their r
 - A department is shared **only when both people have installed it as shared**. One side marking it shared shares nothing.
 - Inside shared departments and the shared record, both assistants work under the charter: neutral mediator, Socratic, facts only. Outside the shared space, each assistant remains its own person's advocate — neutrality is scoped, never global.
 - Only what is written in the shared record crosses. Neither assistant can see the other's install, memory, or other departments — by design, not by policy toggle.
-- Accountability questions run by mutual consent, in the open: both sides see the query log (see `couples/CHARTER.md` for the reference charter).
+- Questions between the two people go in the shared record, in the open, by mutual consent: the person asked answers for themselves. Their assistant may draft the answer; they approve it before it is written. Assistants never answer each other (SAFETY S2.3; see `couples/CHARTER.md`).
 - Either person can pause or end sharing at any time, no reason needed ("couples stop" / "stop sharing" in the kernel). Ending sharing closes the wire; the shared record remains as the history both people already saw.
 
 ## Setup sequence
@@ -33,7 +35,7 @@ Permissions follow people: everything a counterparty may see lives under their r
 4. Both sides record, in their own profile, which departments are shared and where the shared record lives.
 
 ## When Life OS suggests sharing (the share check)
-Shared departments should rarely be the person's idea to request — the system notices first, because noticing is the mental load it exists to carry (rule S13). The suggestion is a proposal, never an action: nothing is ever shared silently.
+Shared departments should rarely be the person's idea to request — the system notices first, because noticing is the mental load it exists to carry (RHYTHM R27). The suggestion is a proposal, never an action: nothing is ever shared silently.
 
 **Signals** that a department wants a second person:
 - The department's subject materially involves another identifiable person — a partner in Us, a co-buyer in a home search, a parent in Caregiving, a travel companion in Trips.

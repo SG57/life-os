@@ -8,12 +8,20 @@
 # departments, misbehavior, scrubbed bug reports), STATE gains the life map, the departments registry and the events log,
 # BOOTSTRAP gains the life map step and the one-department onboarding, RHYTHM gains R22. Measured always-resident set
 # (SAFETY+RHYTHM+OVERSIGHT): about 6,500 tokens. RETURN and RESIDENT bundles rise accordingly. Areas may reach 1,500.
-kernel/SAFETY.md 3850
-kernel/RHYTHM.md 1800
+# Amendment 2026-10-21: README.md 950 -> 1100. README carries the setup message, a short versionless prompt that points
+# the assistant at dist/PASTE-SETUP.txt; the site copies it from here. README is read by a person and never loaded at runtime.
+# Amendment 2026-10-22 (3.6.0): SAFETY and CRISIS are written in specification voice (fetch tools and safety filters kept
+# refusing the imperative text; a WebFetch trial on 2026-10-21 refused it too) and gained S1.7 and the automatic-update S5.1.
+# BOOTSTRAP gained the departments step (B10 with D1-D4), folded in from setup/ so it travels inside the setup message;
+# the ongoing department rules went to RHYTHM (R24-R27) so they stay loaded after setup.
+# Measured: SAFETY 4192, CRISIS 910, BOOTSTRAP 3360, RHYTHM 2077, PASTE-SETUP 8629, PASTE-RESIDENT 9951, PASTE-RETURN 10108, README 1129.
+# The always-loaded set grows by about 600 tokens (spec voice plus R24-R27); budgets are measured + 3%.
+kernel/SAFETY.md 4350
+kernel/RHYTHM.md 2150
 kernel/OVERSIGHT.md 750
 kernel/STATE.md 2050
-kernel/BOOTSTRAP.md 3200
-kernel/CRISIS.md 850
+kernel/BOOTSTRAP.md 3500
+kernel/CRISIS.md 950
 areas/_TEMPLATE.md 450
 areas/after-loss.md 1450
 areas/business.md 1450
@@ -52,11 +60,11 @@ areas/work.md 1450
 calendar/ANNUAL.md 1300
 adapters/CAPABILITIES.md 1000
 adapters/MUSE.md 1050
-dist/PASTE-SETUP.txt 8000
-dist/PASTE-RETURN.txt 10000
-dist/PASTE-RESIDENT.txt 9850
+dist/PASTE-SETUP.txt 8900
+dist/PASTE-RETURN.txt 10450
+dist/PASTE-RESIDENT.txt 10250
 dist/CATALOG.txt 3600
-README.md 950
+README.md 1200
 TRUST.md 2400
 example/maya/README.md 2500
 adapters/GROK-BOT.md 650

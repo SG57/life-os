@@ -1,4 +1,4 @@
-> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.0.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
+> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.6.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
 
 # Upkeep & safety
 `version: 3.0.0 · autonomy_max: T2 (holds and reminders only) · connectors: none · also: home, money, protection, preparedness, vehicles, home-buying, later-life · fresh_days: 365 for alarm and system dates, 30 for recalls · sensitivity: low · default: on · wakes_on: always · sleeps_when: never · label: "Upkeep"`

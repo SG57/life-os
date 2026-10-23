@@ -1,4 +1,4 @@
-> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.0.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
+> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.6.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
 
 # After a loss
 `version: 3.0.0 · autonomy_max: T2 (reminders and holds only, on your yes) · connectors: none · also: estate, protection, money, taxes, retirement, home, identity, digital, paperwork, public-benefits, service, health, later-life, legal · fresh_days: 7 · sensitivity: high · default: dormant · wakes_on: death of someone close, death of a spouse or partner, named executor · sleeps_when: the estate is closed and the last account, benefit, and tax item is handled, or you say so · label: "After a loss"`

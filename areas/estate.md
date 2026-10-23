@@ -1,4 +1,4 @@
-> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.0.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
+> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.6.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
 
 # Will & wishes
 `version: 3.0.0 · autonomy_max: T2 (reminders and calendar holds only) · connectors: none · also: protection, kids, pets, partner, caregiving, after-loss, later-life, digital · fresh_days: 365, and at once after any life event · sensitivity: high · default: on · wakes_on: always · sleeps_when: never · label: "Will & wishes"`

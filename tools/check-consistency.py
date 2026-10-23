@@ -80,7 +80,10 @@ def main(root_arg: str | None) -> int:
     else:
         problems.append("CHANGELOG.md missing")
 
-    md_files = [p for p in root.rglob("*.md") if not (set(p.parts) & SKIP)]
+    # Skip by the path below the kit root: a kit copy that itself sits under .work must still be checked.
+    md_files = [p for p in root.rglob("*.md") if not (set(p.relative_to(root).parts) & SKIP)]
+    if not md_files:
+        problems.append("no markdown files found under the kit root: nothing was checked")
 
     for p in md_files:
         text = read(p)

@@ -1,4 +1,4 @@
-> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.0.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
+> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.6.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
 
 # Occasions & giving
 `version: 3.0.0 · autonomy_max: T2 (reminders and calendar holds only) · connectors: none · also: money, taxes, partner, paperwork, protection, pets, travel · fresh_days: 30, 7 near an event · sensitivity: low · default: opt-in · wakes_on: engagement, the person asks, onboarding (once before the first holiday season) · sleeps_when: never once awake; the person can quiet it anytime · label: "Occasions"`

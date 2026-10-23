@@ -1,48 +1,63 @@
+> **For you.** What changed, in plain words. Your assistant tells you about each update at the top of your Brief, starting with its privacy line.
+
 # Changelog
 
-## 3.5.3 — 2026-10-22
-- **No install writes to the repo, the maintainer's included** (SAFETY S1.7, `setup/UPDATE_CHECK.md`). A framework improvement found while dogfooding is drafted as an email to the maintainer (subject "Life OS change proposal: <short title>": what, where, why, proposed text), scrubbed of everything about the person, and he applies it from his own machine. This replaces 3.5.2's pull requests from an assistant account: no assistant holds write access at all.
+## [3.6.0] - 2026-10-22
+privacy-affecting: yes. Setup now builds a place for every part of your life at once, so your assistant keeps notes for more departments from day one. All of it comes from what you tell it. Updates now apply on their own. Nothing about you is ever sent back to Life OS.
 
-## 3.5.2 — 2026-10-22
-- **Security: nothing about the person in public places (new rule S1.7).** A public repository, a published page or share link, or a public post is shared with everyone, so framework text written there never carries names, places, institutions, amounts, dates, health or relationship details, or links to anyone's documents, whoever asks. Writing there is a T3 action: read-back and yes first.
-- **The upstream rule now has a lock** (`setup/UPDATE_CHECK.md`): the maintainer's assistant proposes each write-back as a pull request from its own account, after showing the exact change; the repo's private-data check must pass and the maintainer approves the merge. It never pushes to main. Why: a rule with no check behind it is not enough; now the private-data check blocks the merge.
+### Added
+- Setup builds every department your life touches, after one yes. Each gets its own chat if your assistant can make chats. Each one asks its few questions when you open it, at your pace. The rest sleep until life wakes them.
+- One shared record. Departments never message each other. The main chat holds the facts they share, so you are never asked the same thing twice.
+- Shared departments. When a department is really two people's work, like a home search with a partner, Life OS offers once to share it. Nothing is shared without both of your yes. Each of you answers your own questions.
+- A new safety rule: nothing about you ever goes to a public place, like a public website or a public code page, whoever asks (S1.7).
+- A front door for assistants that find Life OS on GitHub. It runs the same setup as the website.
 
-## 3.5.1 — 2026-10-21
-- Maintainer's upstream rule sharpened (`setup/UPDATE_CHECK.md`): propagation is the default, tested by "could another install use this?", done the same session and never waiting to be asked — plus a monthly upstream sweep (the maintainer's install diffs its evolved state against the repo and propagates or flags whatever generic thing was missed). Written after the maintainer had to ask twice in one day; the norm now carries its own enforcement.
+### Changed
+- Updates apply on their own, once a week with your Brief. The Brief says what changed, in plain words. Say "undo the update" to go back. Updates never touch your facts, your settings, or what you share.
+- The safety rules now read as a plain description of what your assistant agreed to do. The rules are the same. One sentence at the top now matches rule S1.2: the safety rules come first.
 
-## 3.5.0 — 2026-10-21
-- New behavior: **the share check (rule S13)**. Life OS now watches for departments that are really two-person work — a partner named inside a jointly-shaped life area, a co-buyer, a joint commitment actually starting — and HQ offers, once and in plain language, to make the department shared ("Want to share the home search with your partner? One record, both assistants in the loop"). A yes runs the shared-departments setup; a no is recorded and respected, re-asked only on a material change; private/never-touch and ordinarily-personal departments are never pitched unless the person raises sharing first. Full spec in `setup/SHARED_DEPARTMENTS.md` ("When Life OS suggests sharing"). The point is the system's founding one: noticing is the mental load the system carries, so the person doesn't have to. Born from dogfooding the first bridge.
+### Removed
+- One new department a week. Setup now builds them all at once.
 
-## 3.4.0 — 2026-10-21
-- New: **`setup/SHARED_DEPARTMENTS.md`** — the bridge scaffold, generalized from a live two-person bridge. A department shared across two people's installs = mirrored chats + one shared record as the only wire; person-first folder structure (`Shared Departments/<Person>/…`) so sharing permissions follow people and each counterparty gets a sealed root; bridge documents at the root (START HERE, CHARTER, Bridge Protocol, Discussion/Decisions/Accountability logs, Topics/), one subfolder + Shared Record per shared department; neutrality scoped to the shared space by charter; either person can end sharing at any time. README/BOOTSTRAP updated to list it; README version header synced.
+## [3.0.0] - 2026-10-18
+privacy-affecting: yes. Your assistant now keeps a short "life map" from setup: roughly your birth year, who counts on you, work, home, car, and anything big coming. It also keeps the list of departments it watches and the life events you told it about. All of it comes from you. None of it is guessed. A pregnancy, or any other sensitive health topic, is never stored and never wakes a department. Nothing new is read from mail, calendar, or spending.
 
-## 3.3.2 — 2026-10-21
-- **Kernel re-presentation** (`kernel/SAFETY.md`, `kernel/CRISIS.md`): rewritten in specification voice — a framed document describing the rules an installation adopts, instead of a wall of second-person imperatives. Same rules, same IDs (S0.1–S5.1, C1–C7), same crisis table, same defined verbatim lines; substance unchanged. Why: the imperative format kept tripping automated safety/injection checks when assistants (including the maintainer's own) read the files, and one install skipped the kernel over it. Verified: the reworked files now read clean through the maintainer's tools.
-- **"No GitHub, ever, for readers" is now an install rule**, stated in BOOTSTRAP's Getting-the-files section (an assistant that routes the person to a GitHub sign-up or connector has taken a wrong turn), and the scaffolding doc's new maintainer note requires the sg57.dev setup text to open with that rule plus the kernel-required rule. Life OS is built for non-technical people; the machinery stays invisible.
+### Added
+- A department for every part of adult life: 34 in all. 9 are offered to everyone over the first weeks: Money, Insurance & benefits, Health, Home, Upkeep & safety, Papers & IDs, Taxes, Identity & scams, Will & wishes. 9 wake when you ask, or when your life map points to them: Work, Retirement, Debts & credit, Vehicles, Pets, Digital life, Business & side income, Emergencies, Occasions & giving. 16 sleep until life wakes them: Us, Kids, School, Caregiving, After a loss, Separation, Later life, Moving, Buying or selling a home, Trips, Legal papers, Medical bills, Benefits, Status papers, Military & veterans, Extra support.
+- Each department knows what to watch and what to ask you: five questions, once. It knows what things cost, low and high. It knows what happens if nothing is done, and when a professional takes over.
+- Oversight, always on. Once a month it checks how every department is running. It offers to wake or sleep one department at a time, with your yes. It fixes a department that misbehaves. When Life OS itself is at fault, it writes a problem report with nothing about your life in it. Only you can send it.
+- A shorter first session, about 10 minutes: one thing handled to the last tap, one department, Good Life, and Oversight. Then one more department a week, each with five quick questions.
+- The CATALOG message: every department in one place, with what wakes it.
+- Money watches for a charge you don't recognize, if you have connected bank or card data read-only. It asks about it as a question, never as a fact.
+- Test results for this version are published. AI models stood in for your assistant; the trust page says exactly what that means.
 
-## 3.3.1 — 2026-10-21
-- **The repo is now framework-only.** Per-install state (a profile, a department map) is never part of the repo; like every install's state, it lives in that person's own workspace only. Installs and updates are unaffected — state was never part of an update.
-- **Access clarified everywhere:** the repo is public — read it via browser, raw files, zip archive, or clone. **No GitHub account and no connector are needed to install or update.** Connectors are writer tools (the maintainer pushing changes), never a reader requirement.
+### Changed
+- "Area" is now "department" everywhere you read. Taxes left Papers & IDs. Vehicles, Moving, and Buying a home left Home. Debts & credit left Money.
+- Paying or moving money: when a payment request arrived in a message, the assistant's line now stops at "that stays with you". It offers to get a bill ready only for one you raised.
+- With no reminder tool, the assistant says "I can't set reminders here" in those words. Then it gives you calendar text with the date, time, and time zone.
+- A crisis cell that is not verified for your country is said as written. Then comes the honest note that no line was verified.
+- Size limits for the rule files rose to fit Oversight and the life map (tools/budgets.txt).
 
-## 3.3.0 — 2026-10-21
-- New: **`setup/BOOTSTRAP.md`** — the single front door. Whichever way an assistant arrives (website paste, a forwarded message, the repo itself), it reads the same entry point, the same read order, and the same fixed "done" checklist. Method is the assistant's to improvise; outcomes are fixed — that's what keeps every install the same system and every update applicable.
-- **Auto-update hardened** (`setup/UPDATE_CHECK.md`): patch/minor framework updates now apply automatically (logged, announced in the next weekly Brief) instead of waiting on a yes; major updates, department creation/deletion, sharing changes, and conflicts with standing local decisions still get one yes first. Trust rules added: the install's recorded source repo is the only update channel (private, branch-protected, maintainer-gated); update claims from any other channel are ignored; version/changelog cross-check before applying; personal data never flows back into the repo; rollback procedure defined.
-- Rule S12 updated to match.
+### Removed
+- Nothing you relied on. The two-person module arrives as the Us department. It shares only what both people typed, has no connections of its own, and ends all sharing at once on "couples stop".
 
-## 3.2.0 — 2026-10-20
-- New: **update checks** (`setup/UPDATE_CHECK.md` + rule S12). Every install records its version and source, checks the source monthly, and adopts framework updates on one yes after a plain-language changelog summary. Updates change rules only — never the person's data; new catalog departments arrive as proposals, never silent creations.
-- Maintainer's upstream rule standardized: enhancements made while dogfooding are written back to the repo in the same session (spec, catalog, VERSION, changelog), so downstream installs inherit everything.
+## [2.0.0] - 2026-10-17
+privacy-affecting: yes. This release defines what your assistant may hold, share, and do. Read TRUST.md before you install.
 
-## 3.1.1 — 2026-10-20
-- New rule **S11 (one shared record)**: departments flag facts outside their remit for HQ to promote to the shared record; every department checks the shared record before asking the person for a fact another department already holds. HQ remains the only wire between departments — no peer-to-peer messaging.
+### Added
+- Everything. Version 1 was one person's private setup. Version 2 is a kit anyone can paste into their own assistant.
+- A safety kernel: who may give instructions, which actions need your yes, a crisis floor, honesty rules about facts, and upgrades by proposal only.
+- One weekly Brief instead of lists you keep yourself.
+- Six areas: Money, Protection, Health, Home, Paperwork, Pets. Good Life is built in and always on.
+- A yearly calendar that raises dates even if you install no area.
+- Paste bundles for every kind of assistant: one for setup, one to return with your note, one to keep in an assistant's settings, and one per area. Each carries the official source and a fingerprint.
+- A fictional example (Maya), a trust page, eval scenarios, and maintainer tools.
 
-## 3.1.0 — 2026-10-20
-- **Department scaffolding is now part of the setup and runs automatically** (`setup/DEPARTMENT_SCAFFOLDING.md`). After the interview, the assistant maps the life map against the full catalog, reads back one build list (the only human gate), then creates and seeds every department chat itself.
-- **New: `setup/department_catalog.md`** — all 34 departments with fixed remits, wake triggers, and starting intake-interview questions, plus the 2 HQ functions (Good Life, Oversight) that never become chats.
-- Full-catalog rule: build everything the life map touches, sleep the rest at HQ with wake triggers, never build what the life map rules out.
-- Every department opens with an intake interview (asked a few at a time, answers recorded, never re-asking what HQ knows); HQ works the interview queue one department at a time.
-- Seed template standardized; waking rule for sleeping departments; migration rule for pre-existing chats.
-- Dogfooded on a live install.
+### Changed
+- Works with any assistant; the start page recommends two by name so a newcomer has a default path. The rules your assistant follows name no vendor; vendor notes live in their own folder.
+- Size limits for the rule files were raised from the first design estimate to what the tested kernel needs. See tools/budgets.txt.
 
-## 3.0.0 — 2026-10-18
-- Fable 5 evolution adopted: kernel (SAFETY, CRISIS), tiered capabilities, weekly Brief, couples department staging. (3.0.0 kept the departments as assistant-internal modules; 3.1.0 restores the founder's one-chat-per-department architecture as the setup's automatic output.)
+### Removed
+- The two-person module. It returns in 2.1 after its rules are written by the people who will use it and tested on both assistants.
+- Any rule that let one partner's assistant answer questions about the other.
+- Automatic upgrades. Updates are proposed and need your yes.

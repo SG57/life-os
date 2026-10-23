@@ -1,4 +1,4 @@
-> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.0.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
+> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.6.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
 
 # Legal papers
 `version: 3.0.0 · autonomy_max: T2 (reminders and calendar holds only) · connectors: none · also: money, home, work, credit, after-loss, separation, paperwork · fresh_days: 1 for a court date · sensitivity: high · default: dormant · wakes_on: legal paper arrives, severance agreement offered, eviction or foreclosure notice, an arrest or jailing (yours or someone close), a dispute you may take further, a contract that renews on its own · sleeps_when: no open legal deadline and no contract with a notice date in the next 12 months · label: "Legal papers"`

@@ -1,4 +1,4 @@
-> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.0.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
+> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.6.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
 
 # School
 `version: 3.0.0 · autonomy_max: T2 (reminders and calendar holds only) · connectors: none · also: taxes, credit, kids, money, protection, vehicles, work · fresh_days: 7 near a deadline, 30 otherwise · sensitivity: medium · default: dormant · wakes_on: enrolling in school or a training program, child within 2 years of college or trade school, child leaves for college, registering for a professional exam · sleeps_when: no enrollment and no exam pending; student loans hand to credit · label: "School"`

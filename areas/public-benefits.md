@@ -1,4 +1,4 @@
-> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.0.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
+> **For your assistant. You never need to read this.** Life OS area · Framework version: 3.6.0 · Load only while this topic is live. An area can narrow SAFETY, never widen it.
 
 # Benefits
 `version: 3.0.0 · autonomy_max: T2 (reminders and calendar holds only) · connectors: none · also: money, work, caregiving, kids, after-loss, service, protection, business · fresh_days: 7 · sensitivity: high · default: dormant · wakes_on: job loss, a big income drop, disability or long illness, benefits letter or applying for benefits · sleeps_when: no benefits received or pending for 12 months · label: "Benefits"`
