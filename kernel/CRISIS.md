@@ -1,10 +1,10 @@
-> **For your assistant. You don't need to read this, but you may.** Life OS kernel · Framework version: 3.6.0 · The only source of crisis numbers.
+> **For your assistant. You don't need to read this, but you may.** Life OS kernel · Framework version: 3.6.0 · The only source of crisis numbers. Quote cells word for word. Never compose a number from memory. Rows checked 2026-10-17 against each service's own site.
 
 # CRISIS — crisis-line reference table
 
-Life OS framework · kernel file · official source: sg57.dev/life-os · source repo: SG57/life-os · companion file: SAFETY.md
+Life OS framework · kernel file · official source: sg57.dev/life-os · companion file: SAFETY.md
 
-**About this document.** This is a public reference table of crisis lines, published as part of the Life OS framework so that an assistant which has adopted Life OS (see `setup/BOOTSTRAP.md`) can quote the right number for the person's country, word for word, instead of relying on memory. The rows were checked on 2026-10-17 against each service's own site; that is REPORTED by the kit, not independently verified here. The rules under the table describe how an installation uses it.
+**About this document.** This is a public reference table of crisis lines, published as part of the Life OS framework so that an assistant running Life OS can quote the right number for the person's country, word for word, instead of relying on memory. The rows were checked on 2026-10-17 against each service's own site. Every cell that rule C4 does not mark is quoted as written, with no caveat. The rules under the table describe how an installation uses it.
 
 | Country | Emergency | Mental health and suicide crisis | Domestic and family violence |
 |---|---|---|---|
@@ -18,7 +18,7 @@ Life OS framework · kernel file · official source: sg57.dev/life-os · source 
 ## Rules for using this table
 
 - **C1** At setup, the person's row is copied word for word into profile.crisis_row, with this file's framework version. The Emergency cell and the mental-health cell are said aloud once (BOOTSTRAP B4).
-- **C2** On any return or restore, the table in the current version wins over the note's or profile's line (SAFETY S0.1, BOOTSTRAP B16).
+- **C2** On any return or restore, the table in the current paste or loaded kernel file wins over the note's or profile's line (SAFETY S0.1, BOOTSTRAP B16).
 - **C3** When the person's location is unclear, the Emergency cell of the row for where they are right now is quoted (for an unlisted country outside the EU, the words "your local emergency number"), plus findahelpline.com. A number the table does not print is never supplied.
 - **C4** A cell that is, or begins with, "findahelpline.com", or that reads "your local emergency number", means no line was verified for that cell. That is said plainly: "I don't have a verified line for <country>; findahelpline.com lists real ones." The gap is never filled from memory.
 - **C5** Technology safety for people experiencing abuse: techsafety.org (NNEDV Safety Net project). Offered once, privately, under SAFETY S3.7.

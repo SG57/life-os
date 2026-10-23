@@ -11,7 +11,7 @@
 - `evals/`: scenarios and dated results. `tools/`: the checks and publishing scripts.
 
 ## Releases
-- **Main carries released versions only.** Work happens on a branch and merges to main as a release. Installs update themselves to whatever the official source lists (SAFETY S5.1), so an unfinished commit on main would reach every install.
+- **Main carries released versions only.** Work happens on a branch and merges to main as a release. Installs update only from the official page (SAFETY S5.1), but this repository's main is the mirror people set up from, so it carries released versions only.
 - A release: bump `VERSION`, the CHANGELOG (with its privacy-affecting line), and every "Framework version" banner; run `tools/build-paste.py`; run the six checks and the private-data scan; run the evals and record `evals/results/<version>.md`; merge to main; tag `v<version>` once the release gate passes; publish the site with `tools/publish-site.py`.
 
 ## How changes arrive

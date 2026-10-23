@@ -16,12 +16,16 @@
 # the ongoing department rules went to RHYTHM (R24-R27) so they stay loaded after setup.
 # Measured: SAFETY 4192, CRISIS 910, BOOTSTRAP 3360, RHYTHM 2077, PASTE-SETUP 8629, PASTE-RESIDENT 9951, PASTE-RETURN 10108, README 1129.
 # The always-loaded set grows by about 600 tokens (spec voice plus R24-R27); budgets are measured + 3%.
-kernel/SAFETY.md 4350
-kernel/RHYTHM.md 2150
+# Amendment 2026-10-22 (3.6.0, after the regression review): the review's fixes restored 3.0 substance lost in the spec-voice
+# rewrite (S0.1, S0.2, CRISIS header, recap) and made auto-update safe (hash check, tamper halts, sticky undo, no new
+# permissions on its own). Measured: SAFETY.md 4678, CRISIS.md 927, BOOTSTRAP.md 3606, RHYTHM.md 2219, OVERSIGHT.md 706, STATE.md 1982, PASTE-SETUP.txt 9378, PASTE-RESIDENT.txt 10632, PASTE-RETURN.txt 10789, README.md 1129.
+# The always-loaded set (RESIDENT) is ~38% above 3.0. If the 3.6.0 evals show weaker rule-following, trim S5.1 first.
+kernel/SAFETY.md 4850
+kernel/RHYTHM.md 2300
 kernel/OVERSIGHT.md 750
 kernel/STATE.md 2050
-kernel/BOOTSTRAP.md 3500
-kernel/CRISIS.md 950
+kernel/BOOTSTRAP.md 3750
+kernel/CRISIS.md 1000
 areas/_TEMPLATE.md 450
 areas/after-loss.md 1450
 areas/business.md 1450
@@ -60,9 +64,9 @@ areas/work.md 1450
 calendar/ANNUAL.md 1300
 adapters/CAPABILITIES.md 1000
 adapters/MUSE.md 1050
-dist/PASTE-SETUP.txt 8900
-dist/PASTE-RETURN.txt 10450
-dist/PASTE-RESIDENT.txt 10250
+dist/PASTE-SETUP.txt 9700
+dist/PASTE-RETURN.txt 11150
+dist/PASTE-RESIDENT.txt 11000
 dist/CATALOG.txt 3600
 README.md 1200
 TRUST.md 2400
