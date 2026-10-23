@@ -15,7 +15,7 @@
 - A release: bump `VERSION`, the CHANGELOG (with its privacy-affecting line), and every "Framework version" banner; run `tools/build-paste.py`; run the six checks and the private-data scan; run the evals and record `evals/results/<version>.md`; merge to main; tag `v<version>` once the release gate passes; publish the site with `tools/publish-site.py`.
 
 ## How changes arrive
-No install writes here, the maintainer's own included. The maintainer's assistant drafts each improvement as an email, "Life OS change proposal: <short title>" (see `setup/UPDATE_CHECK.md`), and the maintainer applies it from his own machine. Main is protected: outside changes need a pull request, the maintainer's approval, and passing `private-data` and `secret-scan` checks; nobody can force-push or delete it.
+No install writes here, the maintainer's own included. The maintainer's assistant drafts each improvement as an email, "Life OS change proposal: <short title>" (see `setup/UPDATE_CHECK.md`), and the maintainer applies it from his own machine. Main is protected: outside changes need a pull request and the maintainer's approval; nobody can force-push or delete it; and no commit lands on main until `private-data` and `secret-scan` have passed on it, with no exceptions, the maintainer included. To land a change: push it to a branch, wait for CI, then move main to that exact commit (`git push origin <branch>:main`).
 
 ## Couples staging area
 A shared folder both partners can reach, restricted to the two of them, laid out as in `setup/SHARED_DEPARTMENTS.md`. Never a public link.
